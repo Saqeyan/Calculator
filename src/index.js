@@ -2,6 +2,15 @@ function Calculator() {
     this.numbers = function () {
         this.a = +prompt('a');
         this.b = +prompt('b');
+        if (isNaN(this.a) || isNaN(this.b)) {
+            alert('write number');
+        } else {
+            alert(calculator.sum());
+            alert(calculator.removed());
+            alert(calculator.mul());
+            alert(calculator.divide());
+        }
+
     }
     this.sum = function () {
         return this.a + this.b;
@@ -18,11 +27,3 @@ function Calculator() {
 }
 let calculator = new Calculator();
 calculator.numbers();
-if (isNaN(calculator.a) || isNaN(calculator.b)) {
-    alert('write number');
-} else {
-    alert(calculator.sum());
-    alert(calculator.removed());
-    alert(calculator.mul());
-    alert(calculator.divide());
-}
